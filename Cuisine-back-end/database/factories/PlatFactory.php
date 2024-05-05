@@ -25,7 +25,7 @@ class PlatFactory extends Factory
         'ingredients'=> $this->faker->text(),
         'recette'=> $this->faker->text(),
         'temps'=> $this->faker->name(),
-        'difficultés'=> $this->faker->name(),
+        'difficultes'=> $this->faker->name(),
         'user_id'=> '1',
         ];
     }

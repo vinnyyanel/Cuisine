@@ -1,0 +1,11 @@
+<app-header></app-header>
+<h2> details</h2>
+        <ul class="list-group" *ngIf="plat">
+          <li class="list-group-item">Description: {{plat.description}}</li>
+          <li class="list-group-item">Ingredients: {{plat.ingredients}}</li>
+          <li class="list-group-item">Recette: {{plat.recette}}</li>
+          <li class="list-group-item">Temps estimé: {{plat.temps}}</li>
+          <li class="list-group-item">Difficultés: {{plat.difficultes}}</li>
+          <li class="list-group-item">Createur: {{createur.nom}}</li>
+        </ul>
+<app-footer></app-footer>

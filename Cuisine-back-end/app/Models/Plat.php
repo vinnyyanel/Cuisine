@@ -16,7 +16,7 @@ class Plat extends Model
         'ingredients',
         'recette',
         'temps',
-        'difficultés',
+        'difficultes',
         'user_id'
     ];
 

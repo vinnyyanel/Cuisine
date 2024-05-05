@@ -1,0 +1,18 @@
+.content{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.formContent{
+  background-color: #a1d0e3;
+  margin-top: 10%;
+  width: 500px;
+  height: 200px;
+  border: thick double #32a1ce;
+}
+.title{
+  text-align: center;
+  justify-content: center;
+  margin-right: 10%;
+}

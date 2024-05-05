@@ -1,0 +1,26 @@
+<h3>mes plats</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col py-4" *ngFor="let plat of plats" >
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/images/logoT.png" class="card-img-top" alt="images">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{plat.nom}}</h5>
+          <p class="card-text">{{plat.description}}</p>
+        </div>
+        <div class="row">
+          <div class="col">
+           <p class="card-text"><small class="text-body-secondary">Duré:{{plat.temps}}</small></p>
+          </div>
+          <div class="col">
+            <p class="card-text"><small class="text-body-secondary">Difficultés:{{plat.difficultes}}</small></p>
+          </div>
+         </div>
+        <div class="card-body text-center">
+          <a [routerLink]="['/plat', plat.id]" class="card-link">Recette</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

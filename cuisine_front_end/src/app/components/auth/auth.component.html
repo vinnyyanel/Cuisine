@@ -1,0 +1,32 @@
+<div class="content">
+  <div class="formContent">
+    <div class="title">
+      <h4>Connexion</h4>
+    </div>
+    <div *ngIf="success">
+      <p>{{success}}</p>
+    </div>
+    <div *ngIf="error">
+      <p>{{error}}</p>
+    </div>
+    <form (ngSubmit)="auth()">
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-3 col-form-label">Email:</label>
+        <div class="col-6">
+          <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="entrer votre mail" [(ngModel)]="user.email">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-3 col-form-label"  >Mot de passe: </label>
+        <div class="col-6">
+          <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="entrer votre mot de passe" [(ngModel)]="user.password">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">se connecter</button>
+    </form>
+  </div>
+</div>
+
+<form (ngSubmit)="logout()">
+  <button type="submit" class="btn btn-primary">se deconnecter</button>
+</form>

@@ -1,0 +1,33 @@
+<div class="content">
+  <div class="formContent">
+    <h3>Nous rejoindre</h3>
+    <div *ngIf="success">
+      <p>{{success}}</p>
+    </div>
+    <form class="row g-3" (ngSubmit)="userCreate()">
+      <div class="col-md-6">
+        <label for="inputNom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="inputNom" name="nom" [(ngModel)]="user.nom" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPrenom" class="form-label">Prénom</label>
+        <input type="text" class="form-control" id="inputPrenom" name="prenom" [(ngModel)]="user.prenom" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="user.email" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputDateNaissance" class="form-label">Date de naissance</label>
+        <input type="date" class="form-control" id="inputDateNaissance" name="dath_of_birth" [(ngModel)]="user.dath_of_birth" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword" class="form-label">Mot de passe</label>
+        <input type="password" class="form-control" id="inputPassword" name="password" [(ngModel)]="user.password" required>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+      </div>
+    </form>
+  </div>
+</div>

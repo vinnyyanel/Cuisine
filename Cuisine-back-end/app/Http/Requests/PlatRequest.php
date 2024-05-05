@@ -22,12 +22,12 @@ class PlatRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nom'=>'required',
+        'nom'=>'required',
         'description'=>'required',
         'ingredients'=>'required',
         'recette'=>'required',
         'temps'=>'required',
-        'difficultés'=>'required',
+        'difficultes'=>'required',
         'user_id'=>'required',
         ];
     }

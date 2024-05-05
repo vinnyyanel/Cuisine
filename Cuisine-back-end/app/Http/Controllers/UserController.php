@@ -25,14 +25,14 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(UserRequest $request)
+    public function store(Request $request)
     {
         try {
             User::create(['nom'=>$request->nom,
             'prenom'=>$request->prenom,
             'email'=>$request->email,
             'dath_of_birth'=>$request->dath_of_birth,
-            'password'=>Hash::make($request->dath_of_birth),
+            'password'=>Hash::make($request->password),
             ]);
             return response()->json(['success'=>'utlisateur creer avec succes']);
 

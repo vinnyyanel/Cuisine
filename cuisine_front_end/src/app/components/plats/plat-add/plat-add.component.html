@@ -1,0 +1,27 @@
+<div class="content">
+  <div class="formContent">
+    <h3>ajouter un plat</h3>
+    <form class="row g-3" (ngSubmit)="createPlat()">
+      <div class="col-md-6">
+        <label for="inputNom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="inputNom" name="nom" [(ngModel)]="plat.nom" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPrenom" class="form-label">Description</label>
+        <input type="text" class="form-control" id="inputPrenom" name="prenom" [(ngModel)]="plat.description" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="plat.temps" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputDateNaissance" class="form-label">Date de naissance</label>
+        <input type="date" class="form-control" id="inputDateNaissance" name="dath_of_birth" [(ngModel)]="plat.difficultes" required>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+      </div>
+    </form>
+  </div>
+</div>
+
