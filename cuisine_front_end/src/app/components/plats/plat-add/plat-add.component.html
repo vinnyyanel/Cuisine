@@ -1,27 +1,57 @@
-<div class="content">
-  <div class="formContent">
-    <h3>ajouter un plat</h3>
-    <form class="row g-3" (ngSubmit)="createPlat()">
-      <div class="col-md-6">
-        <label for="inputNom" class="form-label">Nom</label>
-        <input type="text" class="form-control" id="inputNom" name="nom" [(ngModel)]="plat.nom" required>
+
+
+<!-- Button trigger modal -->
+<form class="d-flex" role="search">
+   <button class="btn btn-outline-info" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">ajouter</button>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-secondary">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ajouter une recette:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="col-md-6">
-        <label for="inputPrenom" class="form-label">Description</label>
-        <input type="text" class="form-control" id="inputPrenom" name="prenom" [(ngModel)]="plat.description" required>
+      <div class="modal-body" >
+        <form class="row g-3" (ngSubmit)="createPlat()">
+          <div class="col-md-6">
+            <label for="inputTitre" class="form-label">Titre:</label>
+            <input type="text" class="form-control" id="inputTitre" name="titre" placeholder="titre" [(ngModel)]="plat.nom" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputDescription" class="form-label">Description</label>
+            <input type="text" class="form-control" id="inputDescription" placeholder="description" name="description" [(ngModel)]="plat.description" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputTemps" class="form-label">Temps de preparation:</label>
+            <input type="time" class="form-control" id="inputTemps" name="temps" [(ngModel)]="plat.temps" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputDifficultes" class="form-label">Difficultés:</label>
+            <select name="difficultes" class="form-select" aria-placeholder="selectioner une option" [(ngModel)]="plat.difficultes" required>
+              <option value="Facile">Facile</option>
+              <option value="Moyen">Moyen</option>
+              <option value="Difficile">Difficile</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="inputIngredient" class="form-label">Ingredients:</label>
+            <input type="text" class="form-control" id="inputIngredient" name="ingredient" [(ngModel)]="plat.ingredients" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputImage" class="form-label">Photo:</label>
+            <input type="file" class="form-control" id="inputImage" (change)="selectImg($event)" name="image" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputRecette" class="form-label">Recette:</label>
+            <textarea class="form-control" id="inputRecette" placeholder="saisissez votre recette ici" name="recette" [(ngModel)]="plat.recette" required></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-outline-secondary" data-bs-dismiss="modal">ajouter</button>
+          </div>
+        </form>
       </div>
-      <div class="col-md-6">
-        <label for="inputEmail" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail" name="email" [(ngModel)]="plat.temps" required>
-      </div>
-      <div class="col-md-6">
-        <label for="inputDateNaissance" class="form-label">Date de naissance</label>
-        <input type="date" class="form-control" id="inputDateNaissance" name="dath_of_birth" [(ngModel)]="plat.difficultes" required>
-      </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">S'inscrire</button>
-      </div>
-    </form>
+    </div>
   </div>
 </div>
-

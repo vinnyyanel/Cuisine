@@ -19,6 +19,7 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { AdminUserListComponent } from './components/admin/dashboard/admin-user-list/admin-user-list.component';
 import { AdminPlatListComponent } from './components/admin/dashboard/admin-plat-list/admin-plat-list.component';
+import { PlatModifComponent } from './components/plats/plat-modif/plat-modif.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AdminPlatListComponent } from './components/admin/dashboard/admin-plat-
     UserDetailComponent,
     DashboardComponent,
     AdminUserListComponent,
-    AdminPlatListComponent
+    AdminPlatListComponent,
+    PlatModifComponent
   ],
   imports: [
     BrowserModule,

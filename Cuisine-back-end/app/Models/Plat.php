@@ -17,6 +17,7 @@ class Plat extends Model
         'recette',
         'temps',
         'difficultes',
+        'cheminImage',
         'user_id'
     ];
 

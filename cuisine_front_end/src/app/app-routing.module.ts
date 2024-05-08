@@ -10,30 +10,21 @@ import { PlatDetailsComponent } from './components/plats/plat-details/plat-detai
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { authGuard } from './auth/auth.guard';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { PlatAddComponent } from './components/plats/plat-add/plat-add.component';
 
 const routes: Routes = [
-  {
-    path:'users',
-    component:UserListComponent,
-    canActivate:[authGuard]
-  },
   {
     path:'connexion',
     component:AuthComponent
   },
   {
-    path:'dashboard',
+    path:'dashboard/:id',
     component:DashboardComponent,
     canActivate:[authGuard]
   },
   {
     path:'inscription',
     component:UserAddComponent,
-    canActivate:[authGuard]
-  },
-  {
-    path:'plats',
-    component:PlatListComponent,
     canActivate:[authGuard]
   },
   {

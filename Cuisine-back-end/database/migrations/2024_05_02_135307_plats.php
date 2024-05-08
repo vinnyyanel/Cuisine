@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('recette');
             $table->string('temps');
             $table->string('difficultes');
+            $table->string('cheminImage');
             $table->timestamps();
 
 

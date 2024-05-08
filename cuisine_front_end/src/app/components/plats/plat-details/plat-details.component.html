@@ -1,11 +1,18 @@
 <app-header></app-header>
-<h2> details</h2>
-        <ul class="list-group" *ngIf="plat">
-          <li class="list-group-item">Description: {{plat.description}}</li>
-          <li class="list-group-item">Ingredients: {{plat.ingredients}}</li>
-          <li class="list-group-item">Recette: {{plat.recette}}</li>
-          <li class="list-group-item">Temps estimé: {{plat.temps}}</li>
-          <li class="list-group-item">Difficultés: {{plat.difficultes}}</li>
-          <li class="list-group-item">Createur: {{createur.nom}}</li>
-        </ul>
+<div class="container fluid">
+<div class="card" style="width: 25rem;" *ngIf="plat">
+  <img src="http://{{plat.cheminImage}}" height="200px" width="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{plat.nom}}</h5>
+  </div>
+    <ul class="list-group" *ngIf="plat">
+      <li class="list-group-item"><b>Description:</b> {{plat.description}}</li>
+      <li class="list-group-item"><b>Ingredients:</b> {{plat.ingredients}}</li>
+      <li class="list-group-item"><b>Recette:</b> {{plat.recette}}</li>
+      <li class="list-group-item"><b>Temps estimé:</b> {{plat.temps}}</li>
+      <li class="list-group-item"><b>Difficultés:</b> {{plat.difficultes}}</li>
+      <li class="list-group-item"><b>Createur:</b> {{createur.nom}}</li>
+    </ul>
+</div>
+</div>
 <app-footer></app-footer>

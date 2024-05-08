@@ -28,6 +28,7 @@ class PlatRequest extends FormRequest
         'recette'=>'required',
         'temps'=>'required',
         'difficultes'=>'required',
+        'image'=>'required',
         'user_id'=>'required',
         ];
     }

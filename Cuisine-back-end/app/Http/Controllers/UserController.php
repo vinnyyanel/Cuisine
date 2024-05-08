@@ -6,6 +6,7 @@ use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -25,20 +26,25 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         try {
-            User::create(['nom'=>$request->nom,
+           $img = $request->file('image');
+          $nomIm =$request['email'].'.'.$img->getClientOriginalExtension();
+           $chemin = Storage::disk('public')->putFileAs('images',$img,$nomIm);
+           $photoUrl = Storage::url($chemin);
+           User::create(['nom'=>$request->nom,
             'prenom'=>$request->prenom,
             'email'=>$request->email,
             'dath_of_birth'=>$request->dath_of_birth,
+            'role'=>$request->role,
+            'cheminImage'=> $photoUrl,
             'password'=>Hash::make($request->password),
             ]);
             return response()->json(['success'=>'utlisateur creer avec succes']);
-
         } catch (\Throwable $th) {
 
-            return response()->json(['error'=>'erreur lors de la creation de l utilisateur']);
+            return response()->json(['error'=>'erreur lors de la creation de l utilisateur','catch'=>$th->getMessage()]);
         }
 
     }
@@ -62,7 +68,6 @@ class UserController extends Controller
     public function update(UserRequest $request, string $id)
     {
         try {
-
             $user = User::find($id);
             $user->update($request->all());
             return response()->json(['success'=>'utilisateur modifier avec succes']);

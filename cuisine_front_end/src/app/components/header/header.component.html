@@ -1,12 +1,17 @@
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/index']">
+      <a class="navbar-brand" [routerLink]="['/index']">
       <img src="/assets/images/logoT.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       mes recette
     </a>
+    <div class="home">
     <a class="navbar-brand" [routerLink]="['/index']">
-      Acceuil
+      <img src="/assets/images/home.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
     </a>
+    <a class="navbar-brand" (click)="deconnexion" [routerLink]="['/connexion']">
+      <img src="/assets/images/icons8-connexion-16.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+    </a>
+  </div>
     <app-search></app-search>
   </div>
 </nav>

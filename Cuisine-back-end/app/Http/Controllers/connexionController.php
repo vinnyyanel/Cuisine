@@ -27,7 +27,7 @@ class connexionController extends Controller
         }
     }
 
-    public function deconnexion(Request $request){
+    public function deconnexion(){
         try {
 
             /** @var \App\Models\User $user **/

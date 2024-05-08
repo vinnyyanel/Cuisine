@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -13,8 +13,12 @@ export class AuthService {
     return this.http.post<any>(`http://localhost:8000/api/connexion`,user);
   }
 
-  userLogout(user:any):Observable<any>{
-    return this.http.post<any>(`http://localhost:8000/api/deconnexion`,user);
+  userLogout():Observable<any>{
+    const token = localStorage.getItem('Token');
+        const headers = new HttpHeaders({
+          'Authorization': `Bearer ${token}`
+        });
+    return this.http.post<any>(`http://localhost:8000/api/deconnexion`,{headers});
   }
 
 }

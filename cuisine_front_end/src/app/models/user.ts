@@ -4,5 +4,7 @@ export interface User {
   prenom:string;
   dath_of_birth:string;
   email:string;
+  role:string;
+  cheminImage:string;
   password:string;
 }

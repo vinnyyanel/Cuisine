@@ -24,6 +24,8 @@ class User extends Authenticatable
         'dath_of_birth',
         'email',
         'password',
+        'cheminImage',
+        'role'
     ];
 
     /**

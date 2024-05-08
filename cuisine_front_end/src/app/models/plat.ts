@@ -5,6 +5,7 @@ export interface Plat {
   ingredients:string;
   recette:string;
   temps:string;
+  cheminImage:string;
   difficultes:string;
   user_id:number;
 }

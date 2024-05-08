@@ -26,6 +26,8 @@ class UserRequest extends FormRequest
             'prenom'=> 'required',
             'dath_of_birth'=> 'required',
             'email'=> 'required',
+            'role'=>'required',
+            'image'=>'required',
             'password'=>'required',
         ];
     }

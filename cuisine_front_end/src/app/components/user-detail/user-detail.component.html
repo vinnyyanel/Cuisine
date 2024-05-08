@@ -1,9 +1,17 @@
 <app-header></app-header>
+<div class="container fluid">
 <h2> details</h2>
-        <ul class="list-group" *ngIf="user">
-          <li class="list-group-item">Nom: {{user.nom}}</li>
-          <li class="list-group-item">Prenom: {{user.prenom}}</li>
-          <li class="list-group-item">email: {{user.email}}</li>
-          <li class="list-group-item">date de naissance: {{user.dath_of_birth}}</li>
-        </ul>
+<div class="card" style="width: 20rem;" *ngIf="user">
+  <img src="http://localhost:8000{{user.cheminImage}}" height="200px" width="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Profil</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Nom: {{user.nom}}</li>
+    <li class="list-group-item">Prenom: {{user.prenom}}</li>
+    <li class="list-group-item">email: {{user.email}}</li>
+    <li class="list-group-item">date de naissance: {{user.dath_of_birth}}</li>
+  </ul>
+</div>
+</div>
 <app-footer></app-footer>

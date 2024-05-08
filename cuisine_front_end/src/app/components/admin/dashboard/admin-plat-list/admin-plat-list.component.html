@@ -1,3 +1,4 @@
+<div class="container">
 <table class="table table-light table-striped">
   <thead>
     <tr>
@@ -12,9 +13,10 @@
     <tr *ngFor="let plat of plats" >
       <th scope="row">{{plat.id}}</th>
       <td>{{plat.nom}}</td>
-      <td><a [routerLink]="" class="btn btn-outline-info">detail</a></td>
-      <td><a [routerLink]="" class="btn btn-outline-warning">modifier</a></td>
-      <td><a class="btn btn-outline-danger" href="#" role="button">supprimer</a></td>
+      <td><a [routerLink]="['/plat', plat.id]" class="btn btn-outline-info">detail</a></td>
+      <td><a  class="btn btn-outline-warning">modifier</a></td>
+      <td><a (click)="supprimer(plat.id)" class="btn btn-outline-danger" role="button">supprimer</a></td>
     </tr>
   </tbody>
 </table>
+</div>
