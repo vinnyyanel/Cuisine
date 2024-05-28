@@ -1,3 +1,17 @@
+# instruction d'utilisation
+apres la mise en service du server la liste des plat s'affiche.
+le visiteur peut:
+- voir la liste des plats
+-voir les details d'une recette
+-faire une recherche 
+il nya que l'admin qui peut faire un crud a la fois sur les comptes user et sur les recettes depuis son dahsboard
+pour se connecter en tant qu'admin:
+il faut faire un 
+-/connexion
+-ensuite entrer les données de l'user
+apres verification l'user sera rediriger dans le dahsboard
+
+
 # CuisineFrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.

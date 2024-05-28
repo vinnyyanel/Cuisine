@@ -13,6 +13,12 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
 import { PlatAddComponent } from './components/plats/plat-add/plat-add.component';
 
 const routes: Routes = [
+
+  {
+    path:'',
+    pathMatch:'full',
+    component:HomeComponent
+  },
   {
     path:'connexion',
     component:AuthComponent

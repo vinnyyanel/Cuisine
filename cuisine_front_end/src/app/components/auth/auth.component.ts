@@ -32,12 +32,16 @@ export class AuthComponent{
     console.log( localStorage.getItem('Token'));
     console.log('token supprimer');
   }
+
+
   auth(){
     this.authService.userAuth(this.user).subscribe({
       next:(message)=>{
         this.success= message.success;
         localStorage.setItem('Token', message.token);
         localStorage.setItem('user', message.user);
+        console.log(message.user);
+
         const id = message.user.id;
         this.router.navigate(['/dashboard',id]);
       },

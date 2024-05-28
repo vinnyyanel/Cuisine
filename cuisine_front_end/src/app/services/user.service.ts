@@ -36,7 +36,7 @@ export class UserService {
         formData.append('password',user.password);
         console.log(formData.get('role'));
 
-    return this.http.post<any>(`http://127.0.0.1:8000/api/uers`,formData,{headers});
+    return this.http.post<any>(`http://127.0.0.1:8000/api/users`,formData,{headers});
   }
 
   putUser(user:any,id:number):Observable<any>{
